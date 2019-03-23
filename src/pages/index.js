@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import config from '../utils/config';
 import Seo from '../components/Seo';
@@ -11,13 +10,17 @@ export default class IndexPage extends React.Component {
       <Layout>
         <Seo
           title="Home"
-          description="Welcome to GatsbyJs v1"
+          description="Welcome to Nebula"
           url={`${config.siteUrl}`}
         />
-        <h1>Hi Vipin bye bye</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <Link to="/contact">Contact</Link>
+        <section className="hero is-success is-fullheight">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">Fullheight title</h1>
+              <h2 className="subtitle">Fullheight subtitle</h2>
+            </div>
+          </div>
+        </section>
       </Layout>
     );
   }

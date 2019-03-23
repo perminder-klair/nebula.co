@@ -1,10 +1,12 @@
 html {
-  font-family: sans-serif;
+  font-family: 'ApercuPro';
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  width: 1440px;
+  height: 800px;
 }
 article,
 aside,
