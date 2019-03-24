@@ -5,22 +5,41 @@ import config from '../utils/config';
 import Seo from '../components/Seo';
 
 const Container = styled.section`
-  min-height: 118vh !important;
-
   background-image: url('../images/background.png');
   background-repeat: no-repeat;
-  background-position: 81% 0%;
+  background-position: top right;
+  @media screen and (max-width: 768px) {
+    background-image: none;
+  }
+  .container {
+    @media screen and (max-width: 768px) {
+      position: relative;
+      margin: 0px;
+    }
+  }
+  h1 {
+    @media screen and (max-width: 768px) {
+      line-height: 1;
+    }
+  }
+  h2 {
+    @media screen and (max-width: 768px) {
+      padding-right: 0rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }
 `;
 
 const Wrapper = styled.div`
   margin-top: 56px;
   margin-left: 64px;
-  img {
-    width: 176px;
-    height: 54px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    display: flex;
+    margin-left: 0px;
   }
 `;
-
 
 export default class IndexPage extends React.Component {
   render() {
@@ -37,11 +56,14 @@ export default class IndexPage extends React.Component {
           </Wrapper>
           <div className="hero-body">
             <div className="container">
-              <h1 className="has-text-weight-bold">
-                We are digital product creators
-              </h1>
-              <h2>From concept phase to customer validation, all the way through to developing the finished product on the app store</h2>
-              <a className="button is-danger is-rounded">Lets's talk</a>
+              <h1>We are digital product creators</h1>
+              <h2>
+                From concept phase to customer validation, all the way through
+                to developing the finished product on the app store
+              </h2>
+              <a className="button has-text-white is-borderless is-size-5">
+                Let's talk
+              </a>
             </div>
           </div>
         </Container>
