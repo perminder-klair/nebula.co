@@ -61,9 +61,12 @@ export default class IndexPage extends React.Component {
                 From concept phase to customer validation, all the way through
                 to developing the finished product on the app store
               </h2>
-              <a className="button has-text-white is-borderless is-size-5">
-                Let's talk
-              </a>
+              <div className="button-wrapper">
+                <a className="button has-text-white is-borderless is-size-5">
+                  Let's talk
+                </a>
+                <div className="button-shadow" />
+              </div>
             </div>
           </div>
         </Container>

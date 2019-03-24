@@ -39,4 +39,16 @@ h2 {
   height: 64px;
   border: solid 0px;
   margin-top: 3%;
+  z-index: 1;
+}
+
+.button-shadow {
+  width: 272px;
+  height: 60px;
+  opacity: 0.64;
+  border-radius: 23.7px;
+  -webkit-filter: blur(7.7px);
+  filter: blur(7.7px);
+  background-color: #a48a93;
+  margin-top: -3rem;
 }
