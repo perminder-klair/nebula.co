@@ -32,7 +32,7 @@ const Container = styled.section`
     }
   }
   h2 {
-    padding-right: 49rem;
+    padding-right: 58%;
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: normal;
