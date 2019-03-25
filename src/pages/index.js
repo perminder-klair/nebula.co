@@ -12,22 +12,57 @@ const Container = styled.section`
     background-image: none;
   }
   .container {
+    margin: 0px 6.5% 0;
+    position: fixed;
+    top: 29.4%;
+    width: 100%;
     @media screen and (max-width: 768px) {
       position: relative;
       margin: 0px;
     }
   }
   h1 {
+    font-size: 40px;
+    letter-spacing: normal;
+    line-height: 4.6rem;
+    color: #100065;
+    font-family: 'Roboto', Helvetica, sans-serif !important;
     @media screen and (max-width: 768px) {
       line-height: 1;
     }
   }
   h2 {
+    padding-right: 49rem;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #100065;
+    margin-left: 0.46%;
+    font-family: 'Roboto', Helvetica, sans-serif !important;
     @media screen and (max-width: 768px) {
       padding-right: 0rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
     }
+  }
+  .button {
+    border-radius: 24px;
+    background-color: #f50058;
+    width: 272px;
+    height: 64px;
+    border: solid 0px;
+    margin-top: 3%;
+    z-index: 1;
+  }
+  .button-shadow {
+    width: 272px;
+    height: 60px;
+    opacity: 0.64;
+    border-radius: 23.7px;
+    -webkit-filter: blur(7.7px);
+    filter: blur(7.7px);
+    background-color: #a48a93;
+    margin-top: -3rem;
   }
 `;
 
