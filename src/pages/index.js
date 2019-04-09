@@ -9,7 +9,9 @@ const Container = styled.section`
   background-repeat: no-repeat;
   background-position: top right;
   @media screen and (max-width: 768px) {
-    background-image: none;
+    // background-image: none;
+    background-size: contain;
+    background-position: top right;
   }
   .container {
     margin: 0px 6.5% 0;
@@ -29,6 +31,7 @@ const Container = styled.section`
     font-family: 'Roboto', Helvetica, sans-serif !important;
     @media screen and (max-width: 768px) {
       line-height: 1;
+      margin-top: 2rem;
     }
   }
   h2 {
@@ -73,6 +76,7 @@ const Wrapper = styled.div`
     justify-content: center;
     display: flex;
     margin-left: 0px;
+    margin-top: 12.2rem;
   }
 `;
 
