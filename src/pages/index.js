@@ -96,8 +96,8 @@ const Wrapper = styled.div`
 const indexQuery = graphql`
   query {
     contentfulIndex {
-      header
       title
+      description
     }
   }
 `;
@@ -121,8 +121,8 @@ export default class IndexPage extends React.Component {
                 query={indexQuery}
                 render={data => (
                   <React.Fragment>
-                    <h1>{data.contentfulIndex.header}</h1>
-                    <h2>{data.contentfulIndex.title}</h2>
+                    <h1>{data.contentfulIndex.title}</h1>
+                    <h2>{data.contentfulIndex.description}</h2>
                   </React.Fragment>
                 )}
               />
