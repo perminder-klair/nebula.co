@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
 
 import config from '../utils/config';
 import Seo from '../components/Seo';
@@ -9,7 +10,9 @@ const Container = styled.section`
   background-repeat: no-repeat;
   background-position: top right;
   @media screen and (max-width: 768px) {
-    background-image: none;
+    // background-image: none;
+    background-size: contain;
+    background-position: top right;
   }
   .container {
     margin: 0px 6.5% 0;
@@ -29,6 +32,8 @@ const Container = styled.section`
     font-family: 'Roboto', Helvetica, sans-serif !important;
     @media screen and (max-width: 768px) {
       line-height: 1;
+      margin-top: 2rem;
+      text-align: center;
     }
   }
   h2 {
@@ -42,6 +47,7 @@ const Container = styled.section`
     @media screen and (max-width: 768px) {
       padding-right: 0rem;
       margin-top: 1.5rem;
+      text-align: center;
       margin-bottom: 1.5rem;
     }
   }
@@ -53,6 +59,11 @@ const Container = styled.section`
     border: solid 0px;
     margin-top: 3%;
     z-index: 1;
+    @media screen and (max-width: 768px){
+      display: flex;
+      justify-content: center;
+      width: auto;
+    }
   }
   .button-shadow {
     width: 272px;
@@ -63,6 +74,11 @@ const Container = styled.section`
     filter: blur(7.7px);
     background-color: #a48a93;
     margin-top: -3rem;
+    @media screen and (max-width: 768px){
+      display: flex;
+      justify-content: center;
+      width: auto;
+    }
   }
 `;
 
@@ -73,6 +89,16 @@ const Wrapper = styled.div`
     justify-content: center;
     display: flex;
     margin-left: 0px;
+    margin-top: 12.2rem;
+  }
+`;
+
+const indexQuery = graphql`
+  query {
+    contentfulIndex {
+      title
+      description
+    }
   }
 `;
 
@@ -91,11 +117,16 @@ export default class IndexPage extends React.Component {
           </Wrapper>
           <div className="hero-body">
             <div className="container">
-              <h1>We are digital product creators</h1>
-              <h2>
-                From concept phase to customer validation, all the way through
-                to developing the finished product on the app store
-              </h2>
+              <StaticQuery
+                query={indexQuery}
+                render={data => (
+                  <React.Fragment>
+                    <h1>{data.contentfulIndex.title}</h1>
+                    <h2>{data.contentfulIndex.description}</h2>
+                  </React.Fragment>
+                )}
+              />
+
               <div className="button-wrapper">
                 <a className="button has-text-white is-borderless is-size-5">
                   Let's talk
