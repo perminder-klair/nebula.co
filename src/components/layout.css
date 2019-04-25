@@ -4,5 +4,59 @@ html {
 }
 
 body {
-  font-family: 'Roboto', Helvetica, sans-serif !important;
+  font-family: 'apercu', sans-serif !important;
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_bold_italic_pro.otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/Apercu.otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_bold_italic_pro (1).otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_bold_pro.otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_bold_pro (1).otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_medium_italic_pro.otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_medium_italic_pro (1).otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_mono_pro.otf');
+}
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_mono_pro (1).otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_regular_italic_pro.otf');
+}
+
+@font-face {
+  font-family: 'apercu';
+  src: url('/apercu/apercu_regular_pro.otf');
 }
