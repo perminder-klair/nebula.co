@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Lists from '../components/Lists';
 import About from '../components/About';
 import Description from '../components/Description';
+import CenterHero from '../components/CenterHero';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -13,6 +14,7 @@ export default class IndexPage extends React.Component {
         <Lists />
         <About />
         <Description />
+        <CenterHero />
       </Layout>
     );
   }

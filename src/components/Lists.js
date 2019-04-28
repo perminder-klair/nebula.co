@@ -2,13 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  @media screen and (max-width: 600px) {
-    margin-left: 4rem;
-  }
   .container {
-    margin: 0rem 6rem;
+    margin: 6rem 2rem;
     @media screen and (max-width: 600px) {
-      padding: 0rem 0rem;
+      margin: 0rem 0rem;
     }
   }
   ul {
@@ -19,27 +16,31 @@ const Container = styled.section`
     color: ${props => props.theme.blue};
   }
   .ListName {
-    background-image: url('/images/BackgroundBob1.svg');
+    background-image: url('/images/BackgroundBlob1.svg');
     background-repeat: no-repeat;
+    background-position: top center;
   }
   .ListName2 {
     background-image: url('/images/BackgroundBob2.svg');
     background-repeat: no-repeat;
   }
   .ListName3 {
-    background-image: url('/images/BackgroundBob3.svg');
+    background-image: url('/images/BackgroundBlob3.svg');
     background-repeat: no-repeat;
   }
 `;
 
 const ListBoxOne = styled.div`
+  padding-left: 28%;
+  padding-top: 15%;
+  padding-bottom: 11%;
   @media screen and (max-width: 600px) {
     margin-top: 0rem;
   }
 `;
 
 const ListBoxTwo = styled.div`
-  margin-top: 73%;
+  margin-top: 85%;
   padding-top: 18%;
   padding-left: 27%;
   padding-bottom: 23%;
@@ -48,6 +49,9 @@ const ListBoxTwo = styled.div`
   }
 `;
 const ListBoxThree = styled.div`
+  padding-left: 28%;
+  padding-top: 15%;
+  padding-bottom: 11%;
   @media screen and (max-width: 600px) {
     margin-top: 0rem;
   }
