@@ -85,8 +85,10 @@ const Lists = () => (
         <div className="column">
           <div className="ListName2">
             <ListBoxTwo ClassName="">
-              <h2 className="is-size-3 has-text-weight-semibold">Design</h2>
-              <ul className="List">
+              <h2 className="is-size-3 has-text-weight-semibold has-text-white">
+                Design
+              </h2>
+              <ul className="List has-text-white">
                 <li className="is-size-5 has-text-weight-normal">
                   User experience
                 </li>
@@ -108,7 +110,7 @@ const Lists = () => (
             <ListBoxThree>
               <h2 className="is-size-3 has-text-weight-semibold ">Deliver</h2>
               <ul className="List">
-                <li className="is-size-5 has-text-weight-normal">
+                <li className="is-size-5 has-text-weight-normal ">
                   React native development
                 </li>
                 <li className="is-size-5 has-text-weight-normal">

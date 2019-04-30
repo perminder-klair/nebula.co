@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+
 
 const Container = styled.section`
   background-image: url('../images/background.png');
@@ -70,6 +72,15 @@ const Wrapper = styled.div`
   }
 `;
 
+const HeroQuery = graphql`
+  query {
+    contentfulHero {
+      title
+      description
+    }
+  }
+`;
+
 const Hero = () => (
   <Container className="hero is-fullheight">
     <Wrapper>
@@ -77,11 +88,19 @@ const Hero = () => (
     </Wrapper>
     <div className="hero-body">
       <div className="container">
-        <h1>We are digital product creators</h1>
-        <h2>
-          From concept phase to customer validation, all the way through to
-          developing the finished product on the app store
-        </h2>
+        <StaticQuery
+          query={HeroQuery}
+          render={data => (
+            <React.Fragment>
+              <h1 className="has-text-weight-semibold">
+                {data.contentfulHero.title}
+              </h1>
+              <h2 className="has-text-weight-normal is-size-6">
+                {data.contentfulHero.description}
+              </h2>
+            </React.Fragment>
+          )}
+        />
         <div className="button-wrapper">
           <a className="button has-text-white is-borderless is-size-5">
             Let's talk

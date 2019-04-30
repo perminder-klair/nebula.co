@@ -13,9 +13,11 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        trackingId: config.googleAnalytics,
+        spaceId: `pauhdkvmd7iy`,
+        accessToken:
+          '0548731c3a822ccbf85940d8d0fdda8a65782bd2cecfa751a5df8f816465cc91',
       },
     },
     {

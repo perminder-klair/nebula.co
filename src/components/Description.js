@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
 
 const Container = styled.div`
+  background-image: url('/images/yourmbp.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 11% 0%;
   .container {
     padding: 8rem 1rem;
   }
   .title {
-    color: ${props => props.theme.blue};
+    color: ${props => props.theme.white};
   }
   .description {
-    color: ${props => props.theme.blue};
+    color: ${props => props.theme.white};
   }
   .content {
     width: 64%;
@@ -20,21 +25,35 @@ const Container = styled.div`
   }
 `;
 
+const DescriptionQuery = graphql`
+  query {
+    contentfulDescription {
+      title
+      description {
+        description
+      }
+    }
+  }
+`;
+
 const Description = () => (
   <Container className="Section">
     <div className="container">
       <div className="columns has-text-justified">
         <div className="content has-text-left">
-          <h1 className="title is-size-2 has-text-weight-semibold">
-            Your MVP...
-          </h1>
-          <p className="description is-size-4 has-text-weight-normal">
-            Very soon will be able to see concepts come to lige in a fully
-            interactive prototype. Here we test functionality of design
-            solutions. gain valuable feedback from your users first experience
-            with your product and provide a shared vision amongst team and
-            stakeholders .
-          </p>
+          <StaticQuery
+            query={DescriptionQuery}
+            render={data => (
+              <React.Fragment>
+                <h1 className="title is-size-2 has-text-weight-semibold">
+                  {data.contentfulDescription.title}
+                </h1>
+                <p className="description is-size-4 has-text-weight-normal">
+                  {data.contentfulDescription.description.description}
+                </p>
+              </React.Fragment>
+            )}
+          />
         </div>
       </div>
     </div>
