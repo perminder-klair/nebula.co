@@ -22,6 +22,12 @@ const Description = styled.div`
   }
 `;
 
+const Image = styled.img`
+  height: auto;
+  max-width: 86%;
+  margin: 13% 12%;
+`;
+
 const AboutQuery = graphql`
   query {
     contentfulAbout {
@@ -47,7 +53,7 @@ const About = () => (
           <div className="container">
             <div className="columns">
               <div className="column">
-                <img src={data.contentfulAbout.image.file.url} />
+                <Image src={data.contentfulAbout.image.file.url} />
               </div>
               <div className="column">
                 <Description>
