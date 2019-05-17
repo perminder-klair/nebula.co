@@ -7,7 +7,10 @@ const Container = styled.section`
   background-repeat: no-repeat;
   background-position: top right;
   @media screen and (max-width: 768px) {
-    background-image: none;
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 78%;
   }
   .container {
     margin: 0px 6.5% 0;
@@ -25,6 +28,7 @@ const Container = styled.section`
     color: #100065;
     @media screen and (max-width: 768px) {
       line-height: 1;
+      margin-top: 4rem;
     }
   }
   h2 {
@@ -65,9 +69,9 @@ const Wrapper = styled.div`
   margin-top: 56px;
   margin-left: 64px;
   @media screen and (max-width: 768px) {
-    justify-content: center;
-    display: flex;
-    margin-left: 0px;
+    margin-top: 36px;
+    margin-left: 12px;
+    width: 125px;
   }
 `;
 

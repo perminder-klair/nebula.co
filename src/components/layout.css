@@ -60,3 +60,16 @@ body {
   font-family: 'apercu';
   src: url('/apercu/apercu_regular_pro.otf');
 }
+
+@media screen and (max-width: 768px) {
+  .columns {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top: 0rem;
+  }
+  .column {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top: 0rem;
+  }
+}
