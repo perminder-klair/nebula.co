@@ -58,7 +58,7 @@ const ListBoxThree = styled.div`
 `;
 
 const Lists = () => (
-  <Container className="section">
+  <Container className="">
     <div className="container">
       <div className="columns">
         <div className="column">

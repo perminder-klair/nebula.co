@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
-
 const Container = styled.section`
   background-image: url('../images/background.png');
   background-repeat: no-repeat;

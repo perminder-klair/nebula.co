@@ -6,7 +6,7 @@ const Container = styled.div`
   background-image: url('/images/yourmbp.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 77%;
+  background-size: 600%;
   margin: 11% 0%;
   .container {
     padding: 8rem 1rem;

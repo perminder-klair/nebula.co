@@ -18,7 +18,7 @@ const Description = styled.div`
   background-repeat: no-repeat;
   background-position: 99% 0%;
   @media screen and (max-width: 600px) {
-    // background-position: 100% 454%;
+    background-position: 100% 430%;
   }
 `;
 
